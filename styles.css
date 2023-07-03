@@ -1,0 +1,327 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Larsseit";
+  src: url(Larsseit.otf);
+}
+
+@font-face {
+  font-family: "LarsseitLight";
+  src: url(Larsseit-Light.otf);
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  z-index: 100;
+  background: #fff;
+}
+
+nav {
+  padding: 20px 45px;
+  display: flex;
+  align-items: center;
+}
+
+nav a{
+  font-size: 16px;
+  color: #000;
+  margin-left: 10px;
+  text-decoration: none;
+  border: 2px #000 solid;
+  border-radius: 50px;
+  padding: 14px 17px;
+  font-family: "Larsseit";
+}
+
+.fa-external-link-alt{
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.logo{
+  padding: 30px 70px;
+}
+
+.logo a{
+  font-size: 36px;
+  color: #000;
+  text-decoration: none;
+  font-family: "Larsseit";
+  letter-spacing: -1px;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background: black;
+  margin: 4px 0;
+  border-radius: 100px;
+}
+
+.search-container{
+  position: relative;
+}
+
+.input {
+  padding: 24px 32px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 50px;
+  font-family: "font1";
+  font-size: 16px;
+  color: #000;
+  outline: none;
+  transition: .5s;
+  margin-top: -3px;
+}
+
+.search-container i{
+  position: absolute;
+  top: 47%;
+  right: 17px;
+  transform: translate(-50%,-50%);
+  font-size: 17px;
+  color: #000;
+  transition: .2s;
+}
+
+.search-container:hover i{
+  opacity: 0;
+  z-index: -1;
+}
+
+.search-container:hover input{
+  width: 300px;
+  background: #fff;
+}
+
+.email-container {
+  position: relative;
+}
+
+.hover {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.hover:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000;
+  transition: width 0.3s;
+  z-index: -1;
+}
+
+.hover:hover:before {
+  width: 100%;
+}
+
+.hover:hover {
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.parent {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 77.5% 22.5%;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  overflow: hidden;
+}
+
+.left {
+  grid-area: 1 / 1 / 3 / 2;
+  margin-left: 7px;
+  margin-bottom: 7px;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 45%;
+  left: 3%;
+  text-align: left;
+}
+
+.text-overlay h1 {
+  font-size: 90px;
+  color: #fff;
+  line-height: 92px;
+  font-family: "LarsseitLight";
+  margin-top: 10px;
+}
+
+.text-overlay p {
+  font-size: 16px;
+  color: #fff;
+  font-family: "LarsseitLight";
+}
+
+.text-overlay-top{
+  position: absolute;
+  top: 35%;
+  left: 80%;
+  text-align: left;
+}
+
+.text-overlay-top h1 {
+  font-size: 38px;
+  color: #fff;
+  line-height: 40px;
+  font-family: "LarsseitLight";
+  margin-top: 10px;
+}
+
+.text-overlay-top p {
+  font-size: 16px;
+  color: #fff;
+  font-family: "LarsseitLight";
+}
+
+.text-overlay-bottom{
+  position: absolute;
+  top: 79%;
+  left: 80%;
+  text-align: left;
+}
+
+.text-overlay-bottom h1 {
+  font-size: 38px;
+  color: #fff;
+  line-height: 40px;
+  font-family: "LarsseitLight";
+  margin-top: 10px;
+}
+
+.text-overlay-bottom p {
+  font-size: 16px;
+  color: #fff;
+  font-family: "LarsseitLight";
+}
+
+.right-top {
+  grid-area: 1 / 2 / 2 / 3;
+  margin-top: 100px;
+  margin-left: 7px;
+  margin-right: 7px;
+  overflow: hidden;
+  font-family: "VremenaGrotesk";
+}
+
+.right-bottom {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 7px;
+  overflow: hidden;
+  font-family: "VremenaGrotesk";
+}
+
+.left img,
+.right-top img,
+.right-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.read-article{
+  margin-top: 45px;
+}
+
+.read-article a{
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px #fff solid;
+  border-radius: 50px;
+  padding: 15px 27px;
+  font-family: "Larsseit";
+}
+
+.fa-external-link-alt{
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.btns {
+  display: flex;
+  gap: 5px;
+}
+
+.by p {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 25px;
+  padding-left: 60px;
+  font-family: "Larsseit";
+  background: rgba(158, 158, 158, 0.7);
+  margin-top: 30px;
+}
+
+.by img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 33px;
+}
+
+.hover-btn{
+  overflow: hidden;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.hover-btn:hover {
+  color: #000;
+  background: #fff;
+}
